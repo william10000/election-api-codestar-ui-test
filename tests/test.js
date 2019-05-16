@@ -2,7 +2,7 @@
 
 const supertest = require('supertest'); 
 const test = require('unit.js');
-const app = require('../src/app.js');
+const app = require('../src/server/server.local');
 
 const request = supertest(app);
 

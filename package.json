@@ -23,7 +23,7 @@
         "sqlite3": "^4.0.3"
     },
     "scripts": {
-        "test": "mocha --recursive tests",
+        "test": "mocha --compilers js:babel-core/register --recursive tests",
         "build": "rimraf dist/ && babel src/ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
         "start": "nodemon --exec babel-node src/server/server.local.js",
         "package": "npm run build && npm run package:pack",
