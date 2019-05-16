@@ -1,0 +1,1 @@
+{"statusCode":200,"body":"{\"Output\":\"Hello Worldzz Get!\"}","headers":{"x-powered-by":"Express","content-type":"application/json; charset=utf-8","content-length":"31","etag":"W/\"1f-jrOUu1T6PaBvjmImGNPDRZdfrvE\"","date":"Wed, 15 May 2019 01:54:40 GMT","connection":"close"},"isBase64Encoded":false}

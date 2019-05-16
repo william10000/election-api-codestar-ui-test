@@ -4,15 +4,29 @@
     "version": "0.0.1",
     "private": true,
     "dependencies": {
-        "express": "4.16.2",
-        "aws-serverless-express": "3.1.3"
+        "aws-serverless-express": "3.1.3",
+        "body-parser": "^1.18.3",
+        "express": "^4.16.4",
+        "morgan": "^1.9.1",
+        "sequelize": ">=5.3.0"
     },
     "devDependencies": {
         "mocha": "5.0.0",
         "supertest": "^3.4.2",
-        "unit.js": "^2.1.0"
+        "unit.js": "^2.1.0",
+        "babel-cli": "^6.26.0",
+        "babel-plugin-dynamic-import-node": "^2.2.0",
+        "babel-preset-env": "^1.7.0",
+        "eslint": "^5.8.0",
+        "nodemon": "^1.18.6",
+        "rimraf": "^2.6.2",
+        "sqlite3": "^4.0.3"
     },
     "scripts": {
-        "test": "mocha --recursive tests"
+        "test": "mocha --recursive tests",
+        "build": "rimraf dist/ && babel src/ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
+        "start": "nodemon --exec babel-node src/server/server.local.js",
+        "package": "npm run build && npm run package:pack",
+        "package:pack": "rm -f artifact.zip && cd dist/ && zip -r ../artifact.zip * -x package.json package-lock.json"
     }
 }

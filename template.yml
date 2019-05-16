@@ -42,6 +42,21 @@ Resources:
           Properties:
             Path: /
             Method: get
+        GetEvent:
+          Type: Api
+          Properties:
+            Path: /candidate
+            Method: get
+        GetEvent:
+          Type: Api
+          Properties:
+            Path: /contributors
+            Method: get
+        GetEvent:
+          Type: Api
+          Properties:
+            Path: /contributions
+            Method: get
         PostEvent:
           Type: Api
           Properties:
